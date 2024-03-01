@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin:10;
+            padding: 0;
+        }
+
+        #login-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+         img{
+           size: 10px;
+           text-align: left; 
+        }
+    </style>
+</head>
+<body>
+
+<div id="login-container">
+    
+    <img src="./sp.jpg" >
+    <form onsubmit="return loginUser()">
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+    </form>
+</div>
+
+<script>
+    function loginUser() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("username").value;
+
+        // You should perform actual authentication here (e.g., check against a database).
+        // For simplicity, let's use a hardcoded username and password for demonstration.
+        if (username === "CWKH326H" && password === "Liverpoolfootball11") {
+            alert("Login successful!");
+            // Redirect to another page or perform other actions upon successful login.
+            return true;
+        } else {
+            alert("Invalid username or password. Please try again.");
+            return false;
+        }
+    }
+</script>
+
+</body>
+</html>
